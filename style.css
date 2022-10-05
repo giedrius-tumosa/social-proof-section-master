@@ -238,7 +238,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .container {
-    padding-inline: 1rem;
+    padding: 1rem;
   }
   .top__description {
     text-align: center;
