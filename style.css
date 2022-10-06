@@ -80,6 +80,21 @@ ul {
   grid-template-rows: 1fr 270px;
   row-gap: 5rem;
   align-items: center;
+  position: relative;
+}
+.container::before {
+  content: url(./images/bg-pattern-top-desktop.svg);
+  filter: contrast(50);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container::after {
+  content: url(./images/bg-pattern-bottom-desktop.svg);
+  filter: contrast(50);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .bottom__cards {
   grid-column: 1 / -1;
@@ -252,5 +267,11 @@ body {
     justify-content: center;
     gap: 1rem;
     padding-block: 0.5rem;
+  }
+  .container::before {
+    content: url(./images/bg-pattern-top-mobile.svg);
+  }
+  .container::after {
+    content: url(./images/bg-pattern-bottom-mobile.svg);
   }
 }
