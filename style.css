@@ -9,7 +9,7 @@
 }
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 img {
   display: block;
@@ -67,6 +67,8 @@ ul {
 /* || LAYOUT AND SIZES */
 .wrapper {
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .container {
@@ -80,14 +82,16 @@ ul {
   grid-template-rows: 1fr 270px;
   row-gap: 5rem;
   align-items: center;
-  position: relative;
+  position: static;
 }
+
 .container::before {
   content: url(./images/bg-pattern-top-desktop.svg);
   filter: contrast(50);
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 .container::after {
   content: url(./images/bg-pattern-bottom-desktop.svg);
@@ -95,7 +99,9 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
+
 .bottom__cards {
   grid-column: 1 / -1;
 }
